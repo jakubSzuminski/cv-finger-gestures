@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/@mediapipe/control_utils_3d@0.3/control_utils_3d.css" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/@mediapipe/control_utils@0.6/control_utils.css" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="styles.css" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/@mediapipe/camera_utils@0.3/camera_utils.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@mediapipe/control_utils@0.6/control_utils.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@mediapipe/control_utils_3d@0.3/control_utils_3d.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@mediapipe/drawing_utils@0.3/drawing_utils.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@mediapipe/hands@0.4/hands.js" crossorigin="anonymous"></script>
+    
+    <title>Gesture Controller with Mediapipe</title>
+</head>
+
+<body>
+    <div class="container">
+        <header>
+            <h1>Gesture controller with Mediapipe</h1>
+            <a href="https://solutions.mediapipe.dev/hands" target="_blank">
+                See Mediapipe/Hands documentation here
+            </a>
+        </header>
+        
+        <video id="input-video"></video>
+        <canvas id="output-canvas" width="1280px" height="1080px"></canvas>
+
+        <div id="loading">
+            <div class="spinner"></div>
+            <div class="message"> Loading </div>
+        </div>
+
+        <div class="parameters">
+            <p>Max hands: 2</p>
+            <p>Min. detection confidence: 0.75</p>
+            <p>Min. tracking confidence: 0.75</p>
+        </div>
+
+        <div id="volume">
+            Hello!
+        </div>
+    </div>
+
+    <div id="control-panel"></div>
+
+    <div class='square-box'>
+        <div id="landmark-grid-container"></div>
+    </div>
+</body>
+</html>
+
+<script type="module" src="main.js"></script>
